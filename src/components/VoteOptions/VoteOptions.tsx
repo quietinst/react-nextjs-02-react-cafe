@@ -8,11 +8,6 @@ interface VoteOptionsProps {
 }
 
 const VoteOptions = ({ onVote, onReset, canReset }: VoteOptionsProps) => {
-  const onResetBtnClick = (value: boolean): void => {
-    if (!value) return;
-    onReset();
-  };
-
   return (
     <div className={css.container}>
       <button onClick={() => onVote('good')} className={css.button}>
@@ -24,12 +19,11 @@ const VoteOptions = ({ onVote, onReset, canReset }: VoteOptionsProps) => {
       <button onClick={() => onVote('bad')} className={css.button}>
         Bad
       </button>
-      <button
-        onClick={() => onResetBtnClick(canReset)}
-        className={`${css.button} ${css.reset}`}
-      >
-        Reset
-      </button>
+      {canReset && (
+        <button onClick={onReset} className={`${css.button} ${css.reset}`}>
+          Reset
+        </button>
+      )}
     </div>
   );
 };

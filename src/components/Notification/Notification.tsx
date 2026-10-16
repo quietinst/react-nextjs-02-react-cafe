@@ -1,5 +1,7 @@
+import css from './Notification.module.css';
+
 const Notification = () => {
-  return <div>Notification</div>;
+  return <p className={css.message}>No feedback yet</p>;
 };
 
 export default Notification;
