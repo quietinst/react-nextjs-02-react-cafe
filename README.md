@@ -1,5 +1,7 @@
 # 02 — React Café
 
+🔗 [Live demo](https://react-nextjs-02-react-cafe.vercel.app)
+
 A feedback widget for a coffee shop. Visitors rate the service with one of three
 options — good, neutral, or bad — and instantly see the statistics.
 
